@@ -49,6 +49,7 @@
 	4.2 Safety and Security Requirements
 		Completed by:
 	4.3 Software Quality Attributes
+		Completed by: Alberto Clara (needs more work)
 
 5 Other Requirements
 	Apendex A - Data Dictionary
