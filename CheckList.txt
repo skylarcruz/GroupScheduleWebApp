@@ -47,7 +47,7 @@
 	4.1 Performance Requirements
 		Completed by: Skylar Cruz
 	4.2 Safety and Security Requirements
-		Completed by:
+		Completed by: Fabiane Yeung
 	4.3 Software Quality Attributes
 		Completed by: Alberto Clara (needs more work)
 
