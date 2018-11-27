@@ -1,3 +1,15 @@
 <template name="Schedule_Page">
-  <p>Schedule Page Body</p>
+  {{#If_Logged_In}}
+    <div class="sidenav">
+      <br>
+      <a href="#">Schedule Calendar</a><br>
+      <a href="#">Schedule List</a><br>
+      <a href="#">Add to Schedule</a><br>
+      <a href="#">Edit Schedule</a><br>
+    </div>
+
+  <div class="main">
+    <h1>Schedule Page</h1>
+  </div>
+  {{/If_Logged_In}}
 </template>
