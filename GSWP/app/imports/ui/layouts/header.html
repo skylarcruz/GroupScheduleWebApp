@@ -1,12 +1,28 @@
 <template name="Header">
-    <div class="ui top fixed borderless inverted menu">
-  <div class="ui container">
-      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>CS320-A7-Template</h1></a>
-      {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Stuff </a>
-        <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">List Stuff</a>
-      {{/if}}
-      <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ pathFor 'Home_Page' }}">GROUP SCHEDULE</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="{{ isActiveRoute 'Home_Page'}} item" href="{{ pathFor 'Home_Page' }}">Home</a></li>
+          {{#if currentUser}}
+            <li><a class="{{ isActiveRoute 'Schedule_Page'}} item" href="{{ pathFor 'Schedule_Page' }}">Schedule</a></li>
+          {{/if}}
+          <li><a class="{{ isActiveRoute 'About_Page'}} item" href="{{ pathFor 'About_Page' }}">About</a></li>
+          <li><a class="{{ isActiveRoute 'Pricing_Page'}} item" href="{{ pathFor 'Pricing_Page' }}">Pricing</a></li>
+          <li><a class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" class="right aligned item">{{> loginButtons align="right"}}</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
 </template>
