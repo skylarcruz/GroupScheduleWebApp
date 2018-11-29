@@ -9,23 +9,71 @@ export const Stuff = new Mongo.Collection('Stuff');
  * Create the schema for Stuff
  */
 export const StuffSchema = new SimpleSchema({
-  name: {
-    label: 'Name',
+  courseName: {
+    label: 'Course Name',
     type: String,
     optional: false,
-    max: 20,
+    max: 50,
     autoform: {
-      group: 'Stuff',
-      placeholder: 'Bicycle',
+      placeholder: 'Course Name',
     },
   },
-  quantity: {
-    label: 'Quantity',
-    type: Number,
+  courseNum: {
+    label: 'Course Number',
+    type: String,
+    max: 10,
+    optional: true,
+    autoform: {
+      placeholder: 'Course Number',
+    },
+  },
+  roomNum: {
+    label: 'Room Number',
+    type: String,
+    max: 10,
+    optional: true,
+    autoform: {
+      placeholder: 'Room Number',
+    },
+  },
+  startTime: {
+    type: Date,
+    autoform: {
+      afFieldInput: {
+        type: 'bootstrap-datetimepicker',
+        dateTimePickerOptions: {
+          pickDate: false
+        }
+      }
+    }
+  },
+  startPeriod: {
+    label: 'AM/PM',
+    type: String,
+    max: 2,
     optional: false,
     autoform: {
-      group: 'Stuff',
-      placeholder: '3',
+      placeholder: '',
+    },
+  },
+  endTime: {
+    type: Date,
+    autoform: {
+      afFieldInput: {
+        type: 'bootstrap-datetimepicker',
+        dateTimePickerOptions: {
+          pickDate: false
+        }
+      }
+    }
+  },
+  endPeriod: {
+    label: 'AM/PM',
+    type: String,
+    max: 2,
+    optional: false,
+    autoform: {
+      placeholder: '',
     },
   },
 });

@@ -6,8 +6,9 @@ import { Stuff } from '../../api/stuff/stuff.js';
  * @type {*[]}
  */
 const stuffSeeds = [
-  { name: 'Basket', quantity: 3 },
-  { name: 'Bicycle', quantity: 2 },
+/**  { courseName: 'Fundamentals of Software Engineering', courseNum: 'CS320', roomNum: 'VSCI???',
+    startHour: 12, startMinute: 00, startPeriod: 'PM',
+    endHour: 1, endMinute: 15, endPeriod: 'PM'} **/
 ];
 
 /**

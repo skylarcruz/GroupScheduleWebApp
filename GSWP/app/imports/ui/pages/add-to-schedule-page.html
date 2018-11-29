@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<template name="Add_To_Schedule_Page">
+  {{#If_Logged_In}}
+    <div style="padding-top: 20px" class="ui container">
+      {{#autoForm
+          collection=StuffCollection
+          template="semanticUI"
+          id="AddToScheduleForm"
+          type="insert"
+          resetOnSuccess=true}}
+        <h4>Add Course</h4>
+        <div class="ui divider"></div>
+        {{> afQuickField name='courseName'}}
+        {{> afQuickField name='courseNum'}}
+        {{> afQuickField name='roomNum'}}
+        {{> afQuickField name='startTime'}}
+        {{> afQuickField name='startPeriod'}}
+        {{> afQuickField name='endTime'}}
+        {{> afQuickField name='endPeriod'}}
+        <br>
+        <button type="" class="ui button">submit</button>
+      {{/autoForm}}
+    </div>
+  {{/If_Logged_In}}
+</template>
