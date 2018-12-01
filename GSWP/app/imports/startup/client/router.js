@@ -36,6 +36,13 @@ FlowRouter.route('/contact', {
   },
 });
 
+FlowRouter.route('/calendar', {
+  name: 'Calendar',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Calendar' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
