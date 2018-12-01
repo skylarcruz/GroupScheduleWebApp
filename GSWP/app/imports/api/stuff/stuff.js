@@ -22,7 +22,7 @@ export const StuffSchema = new SimpleSchema({
     label: 'Course Number',
     type: String,
     max: 10,
-    optional: true,
+    optional: false,
     autoform: {
       placeholder: 'Course Number',
     },
@@ -31,50 +31,79 @@ export const StuffSchema = new SimpleSchema({
     label: 'Room Number',
     type: String,
     max: 10,
-    optional: true,
+    optional: false,
     autoform: {
       placeholder: 'Room Number',
     },
   },
   startTime: {
-    type: Date,
+    label: 'Start Time',
+    type: String,
+    optional: false,
     autoform: {
       afFieldInput: {
-        type: 'bootstrap-datetimepicker',
-        dateTimePickerOptions: {
-          pickDate: false
+        type: 'datetimepicker',
+        opts: {
+          datepicker: false,
+          format:'H:mm',
+          step: 10,
+          minTime: '8:00 AM',
+          maxTime: '10:10 PM'
         }
       }
     }
-  },
-  startPeriod: {
-    label: 'AM/PM',
-    type: String,
-    max: 2,
-    optional: false,
-    autoform: {
-      placeholder: '',
-    },
   },
   endTime: {
-    type: Date,
+    label: 'End Time',
+    type: String,
+    optional: false,
     autoform: {
       afFieldInput: {
-        type: 'bootstrap-datetimepicker',
-        dateTimePickerOptions: {
-          pickDate: false
+        type: 'datetimepicker',
+        opts: {
+          datepicker: false,
+          format:'H:mm',
+          step: 10,
+          minTime: '8:00 AM',
+          maxTime: '10:10 PM'
         }
       }
     }
   },
-  endPeriod: {
-    label: 'AM/PM',
-    type: String,
-    max: 2,
-    optional: false,
+  monday: {
+    label: 'Monday',
+    type: Boolean,
     autoform: {
-      placeholder: '',
-    },
+      type: 'boolean-checkbox'
+    }
+  },
+  tuesday: {
+    label: 'Tuesday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  wednesday: {
+    label: 'Wednesday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  thursday: {
+    label: 'Thursday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  friday: {
+    label: 'Friday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
   },
 });
 

@@ -33,6 +33,8 @@ ddp-rate-limiter@1.0.7
 ddp-server@2.0.2
 deps@1.0.12
 diff-sequence@1.0.7
+drewy:autoform-datetimepicker@1.0.666666
+drewy:datetimepicker@1.0.3
 dynamic-import@0.1.3
 ecmascript@0.8.3
 ecmascript-runtime@0.4.1
@@ -101,6 +103,7 @@ templating-compiler@1.3.3
 templating-runtime@1.3.2
 templating-tools@1.1.2
 tracker@1.1.3
+twbs:bootstrap@3.3.6
 ui@1.0.13
 underscore@1.0.10
 url@1.1.0

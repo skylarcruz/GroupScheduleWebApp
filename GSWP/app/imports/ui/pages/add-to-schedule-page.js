@@ -27,3 +27,14 @@ Template.Add_To_Schedule_Page.helpers({
     return Stuff;
   },
 });
+
+Template.dpReplacement.replaces("afBootstrapDateTimePicker");
+
+Template.name.helpers({
+  pickerOpts: function () {
+    return {
+      step: 15, //time step in minutes
+      theme: 'dark',
+    }
+  }
+});
