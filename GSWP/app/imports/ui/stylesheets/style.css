@@ -24,6 +24,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #222222;
   background-color: white;
+  padding-top: 20px;
 }
 
 a {
@@ -51,7 +52,10 @@ Main Components
   .cd-schedule {
     width: 90%;
     max-width: 1400px;
-    margin: 2em auto;
+    margin-top: 6em;
+    margin-bottom: 2em;
+    margin-left: 8em;
+    margin-right: 2em;
   }
   .cd-schedule::after {
     clear: both;

@@ -10,8 +10,8 @@ import '/imports/ui/scss/style.scss';
 import '/imports/ui/partials/_layout.scss';
 import '/imports/ui/partials/_mixins.scss';
 import '/imports/ui/partials/_variables.scss';
-// import './imports/ui/js/jquery-3.0.0.min.js';
-// import './imports/ui/js/modernizr.js';
+import './imports/ui/js/jquery-3.0.0.min.js';
+import './imports/ui/js/modernizr.js';
 
 jQuery(document).ready(function($){
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
