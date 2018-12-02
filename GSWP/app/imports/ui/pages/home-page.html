@@ -47,13 +47,76 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+          <br>
         </div>
         <div class="col-sm-5">
-          <h4> This is a website to view prices visit this link...</h4>
-          <h4> To view how to sign in please do the following....</h4>
-          <h4> This is how the website works... and more examples of it...</h4>
+          <h5><b> Need to organize your schedule? </b></h5>
+          <h5> Allow us to help you. We have a free version to manage your own schedule. Which is great for school,
+            work, or other activities. Make an account with us and you will have access to create your own schedule for
+            free. </h5>
+          <hr>
+          <h5><b> What does our free plan include? </b></h5>
+          <div class="list-group">
+            <a href="#" class="list-group-item">Be able to add and remove events.</a>
+            <a href="#" class="list-group-item">Mobile Friendly Schedule.</a>
+            <a href="#" class="list-group-item">Support within 24 hours.</a>
+          </div>
+          <hr>
+          <h5><b> Coming Soon. Advance Paid Plans </b></h5>
+          <div class="list-group">
+            <a href="#" class="list-group-item">All of the benefits from free plan.</a>
+            <a href="#" class="list-group-item">Being able to have groups and able to share schedules.</a>
+            <a href="#" class="list-group-item">Business Plan.</a>
+          </div>
         </div>
       </div>
+      <h2> A clean and Elegant Design. </h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <img class="img-responsive" id="myImg" src="/images/schedule/image1.jpg" alt="image1"
+            style="width:100%;">
+          <br>
+        </div>
+        <div class="col-sm-6">
+          <img class="img-responsive" id="myImg" src="/images/schedule/image2.jpg" alt="image2" style="width:100%;">
+          <br>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+      </div>
+
     </div>
   </div>
+  <script language="javascript">
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
 </template>
