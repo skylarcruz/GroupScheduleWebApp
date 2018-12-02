@@ -15,6 +15,13 @@ FlowRouter.route('/schedule', {
   },
 });
 
+FlowRouter.route('/calendar', {
+  name: 'Calendar',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Calendar' });
+  },
+});
+
 FlowRouter.route('/schedule-list', {
   name: 'Schedule_List_Page',
   action() {

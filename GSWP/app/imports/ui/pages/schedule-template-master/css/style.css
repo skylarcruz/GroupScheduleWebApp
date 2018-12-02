@@ -1,43 +1,4 @@
-body {
-  padding-top: 61px;  /* Move body of page below navbar. */
-}
-
-.login-link-text {
-  color: white !important;
-}
-
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 120px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 40px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 8px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Style page content */
-.main {
-  margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
-}
-
-/* --------------------------------
+/* -------------------------------- 
 
 Primary style
 
@@ -62,9 +23,9 @@ a {
   text-decoration: none;
 }
 
-/* --------------------------------
+/* -------------------------------- 
 
-Main Components
+Main Components 
 
 -------------------------------- */
 .cd-schedule {
@@ -138,8 +99,8 @@ Main Components
   .cd-schedule .timeline li span {
     display: inline-block;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .cd-schedule .timeline li:nth-of-type(2n) span {
     display: none;
@@ -191,7 +152,7 @@ Main Components
 .cd-schedule .events .single-event {
   /* force them to stay on one line */
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+      flex-shrink: 0;
   float: left;
   height: 150px;
   width: 70%;
@@ -276,7 +237,7 @@ Main Components
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 -3px 0 rgba(0, 0, 0, 0.2);
     /* reset style */
     -ms-flex-negative: 1;
-    flex-shrink: 1;
+        flex-shrink: 1;
     height: auto;
     max-width: none;
     margin-right: 0;
@@ -382,16 +343,16 @@ Main Components
   visibility: hidden;
   /* Force Hardware acceleration */
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: visibility .4s, -webkit-transform .4s;
   transition: visibility .4s, -webkit-transform .4s;
   transition: transform .4s, visibility .4s;
   transition: transform .4s, visibility .4s, -webkit-transform .4s;
   -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
 }
 
 .cd-schedule .event-modal .header {
@@ -445,15 +406,15 @@ Main Components
   z-index: 1;
   background: white;
   -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .cd-schedule .event-modal .header-bg {
   z-index: 2;
   -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
-  transform-origin: top center;
+      -ms-transform-origin: top center;
+          transform-origin: top center;
 }
 
 .cd-schedule .event-modal .close {
@@ -486,14 +447,14 @@ Main Components
 
 .cd-schedule .event-modal .close::before {
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 
 .cd-schedule .event-modal .close::after {
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
 
 .cd-schedule .event-modal .event-date {
@@ -517,15 +478,15 @@ Main Components
     width: auto;
     height: auto;
     -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
     will-change: transform, width, height;
     -webkit-transition: height .4s, width .4s, visibility .4s, -webkit-transform .4s;
     transition: height .4s, width .4s, visibility .4s, -webkit-transform .4s;
     transition: height .4s, width .4s, transform .4s, visibility .4s;
     transition: height .4s, width .4s, transform .4s, visibility .4s, -webkit-transform .4s;
     -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+            transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   }
   .cd-schedule .event-modal .header {
     position: absolute;
@@ -549,10 +510,10 @@ Main Components
   .cd-schedule .event-modal .header-bg, .cd-schedule .event-modal .body-bg {
     /* Force Hardware acceleration */
     -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+            transform: translateZ(0);
     will-change: transform;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+            backface-visibility: hidden;
   }
   .cd-schedule .event-modal .header-bg {
     -webkit-transition: -webkit-transform .4s;
@@ -560,13 +521,13 @@ Main Components
     transition: transform .4s;
     transition: transform .4s, -webkit-transform .4s;
     -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+            transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   }
   .cd-schedule .event-modal .body-bg {
     opacity: 0;
     -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .cd-schedule .event-modal .event-date {
     display: block;
@@ -594,8 +555,8 @@ Main Components
 .cd-schedule.modal-is-open .event-modal {
   /* .modal-is-open class is added as soon as an event is selected */
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   visibility: visible;
 }
 
@@ -620,7 +581,7 @@ Main Components
     transition: transform .4s;
     transition: transform .4s, -webkit-transform .4s;
     -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+            transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   }
 }
 
