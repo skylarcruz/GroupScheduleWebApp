@@ -6,9 +6,9 @@ import { Stuff } from '../../api/stuff/stuff.js';
  * @type {*[]}
  */
 const stuffSeeds = [
-  { courseName: 'Fundamentals of Software Engineering', courseNum: 'CS320', roomNum: 'VSCI???',
-    startTime: "12:00", endTime: "13:20",
-    monday: true, tuesday: false, wednesday: false, thursday: false, friday:false}
+  { courseName: 'Fundamentals of Software Engineering', courseNum: 'CS320', roomNum: 'VSCI 12',
+    startHour: "12", startMin: "00", endHour: "13", endMin: "15",
+    monday: false, tuesday: true, wednesday: false, thursday: true, friday:false, calColor: '1'}
 ];
 
 /**

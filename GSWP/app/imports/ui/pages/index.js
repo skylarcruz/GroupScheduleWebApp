@@ -9,5 +9,6 @@ import './schedule-list-page.js';
 
 import './add-to-schedule-page.html';
 import './add-to-schedule-page.js';
-//more teest
-// testing
+
+import './edit-schedule-page.html';
+import './edit-schedule-page.js';

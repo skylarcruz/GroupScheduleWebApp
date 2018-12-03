@@ -2,32 +2,19 @@
 
 {{#If_Logged_In}}
 
-    <div class="sidenav">
-      <br>
-      <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
-      <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
-      <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
-      <a href="#">Edit Schedule</a><br>
-    </div>
+  {{> Sidebar}}
+
+{{#if Template.subscriptionsReady}}
 
 <body>
-<!--
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-	<link rel="stylesheet" href="css/resetCal.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/styleCal.css"> <!-- Resource style -->
-
-<!-- <title>Schedule Template | CodyHouse</title>
-</head>
-<body> -->
 <div class="container topspace" style="padding-top: 60px">
 
 <div class="cd-schedule loading">
 	<div class="timeline">
 		<ul>
+      <li><span>08:00</span></li>
+      <li><span>08:30</span></li>
 			<li><span>09:00</span></li>
 			<li><span>09:30</span></li>
 			<li><span>10:00</span></li>
@@ -47,6 +34,9 @@
 			<li><span>17:00</span></li>
 			<li><span>17:30</span></li>
 			<li><span>18:00</span></li>
+      <li><span>18:30</span></li>
+      <li><span>19:00</span></li>
+      <li><span>19:30</span></li>
 		</ul>
 	</div> <!-- .timeline -->
 
@@ -57,147 +47,97 @@
 				<div class="top-info"><span>Monday</span></div>
 
 				<ul>
-
-
-					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
-
-
+          {{#each stuff in stuffList}}
+            {{#if stuff.monday}}
+              <li class="single-event" data-start="{{stuff.startHour}}:{{stuff.startMin}}"
+                  data-end="{{stuff.endHour}}:{{stuff.endMin}}"
+                  data-content="event-abs-circuit" data-event="event-{{stuff.calColor}}">
+                <a href="#0">
+                  <em class="event-name">{{stuff.courseNum}}</em>
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
         </ul>
 
-
-
-
 			</li>
 
-			<li class="events-group">
-				<div class="top-info"><span>Tuesday</span></div>
+      <li class="events-group">
+        <div class="top-info"><span>Tuesday</span></div>
 
-				<ul>
-					<li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
+        <ul>
+          {{#each stuff in stuffList}}
+            {{#if stuff.tuesday}}
+              <li class="single-event" data-start="{{stuff.startHour}}:{{stuff.startMin}}"
+                  data-end="{{stuff.endHour}}:{{stuff.endMin}}"
+                  data-content="event-abs-circuit" data-event="event-{{stuff.calColor}}">
+                <a href="#0">
+                  <em class="event-name">{{stuff.courseNum}}</em>
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
 
-					<li class="single-event" data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
+      </li>
 
-					<li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
+      <li class="events-group">
+        <div class="top-info"><span>Wednesday</span></div>
 
-					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
-				</ul>
-			</li>
+        <ul>
+          {{#each stuff in stuffList}}
+            {{#if stuff.wednesday}}
+              <li class="single-event" data-start="{{stuff.startHour}}:{{stuff.startMin}}"
+                  data-end="{{stuff.endHour}}:{{stuff.endMin}}"
+                  data-content="event-abs-circuit" data-event="event-{{stuff.calColor}}">
+                <a href="#0">
+                  <em class="event-name">{{stuff.courseNum}}</em>
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
 
-			<li class="events-group">
-				<div class="top-info"><span>Wednesday</span></div>
+      </li>
 
-				<ul>
-					<li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
+      <li class="events-group">
+        <div class="top-info"><span>Thursday</span></div>
 
-					<li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
+        <ul>
+          {{#each stuff in stuffList}}
+            {{#if stuff.thursday}}
+              <li class="single-event" data-start="{{stuff.startHour}}:{{stuff.startMin}}"
+                  data-end="{{stuff.endHour}}:{{stuff.endMin}}"
+                  data-content="event-abs-circuit" data-event="event-{{stuff.calColor}}">
+                <a href="#0">
+                  <em class="event-name">{{stuff.courseNum}}</em>
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
 
-					<li class="single-event" data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
+      </li>
 
-					<li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
-				</ul>
-			</li>
+      <li class="events-group">
+        <div class="top-info"><span>Friday</span></div>
 
-			<li class="events-group">
-				<div class="top-info"><span>Thursday</span></div>
+        <ul>
+          {{#each stuff in stuffList}}
+            {{#if stuff.friday}}
+              <li class="single-event" data-start="{{stuff.startHour}}:{{stuff.startMin}}"
+                  data-end="{{stuff.endHour}}:{{stuff.endMin}}"
+                  data-content="event-abs-circuit" data-event="event-{{stuff.calColor}}">
+                <a href="#0">
+                  <em class="event-name">{{stuff.courseNum}}</em>
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
 
-				<ul>
-					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
+      </li>
 
-					<li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
-						<a href="#0">
-							<em class="event-name">Restorative Yoga</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-				</ul>
-			</li>
-
-			<li class="events-group">
-				<div class="top-info"><span>Friday</span></div>
-
-				<ul>
-					<li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
-						<a href="#0">
-							<em class="event-name">Rowing Workout</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
-						<a href="#0">
-							<em class="event-name">Abs Circuit</em>
-						</a>
-					</li>
-
-					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
-						<a href="#0">
-							<em class="event-name">Yoga Level 1</em>
-						</a>
-					</li>
-				</ul>
-			</li>
 		</ul>
 	</div>
 
@@ -230,8 +170,10 @@
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-
 </body>
+{{else}}
+  {{> Loading}}
+{{/if}}
 {{/If_Logged_In}}
 </template>
 

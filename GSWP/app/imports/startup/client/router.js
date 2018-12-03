@@ -29,6 +29,13 @@ FlowRouter.route('/add-to-schedule', {
   },
 });
 
+FlowRouter.route('/edit-schedule/:_id', {
+  name: 'Edit_Schedule_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Schedule_Page' });
+  },
+});
+
 FlowRouter.route('/about', {
   name: 'About_Page',
   action() {

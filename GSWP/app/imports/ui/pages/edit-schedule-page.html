@@ -1,0 +1,66 @@
+<template name="Edit_Schedule_Page">
+  {{#If_Logged_In}}
+
+    {{> Sidebar}}
+
+  <div class="container topspace" style="padding-top: 60px">
+
+    <div class="ui text container" style="padding-top: 20px; font-size: 14px">
+      {{#autoForm
+          collection=stuffCollection
+          template="bootstrap3"
+          id="EditScheduleForm"
+          type="update"
+          doc=getDoc
+          buttonContent="Update"
+      }}
+        <b style="font-size: 18px">Edit Course</b>
+        <div class="ui divider"></div>
+        <div class="ui grid" style="font-size: 14px">
+          <div class="sixteen wide column">
+            {{> afQuickField name='courseName'}}
+          </div>
+          <div class="sixteen wide column">
+            {{> afQuickField name='courseNum'}}
+          </div>
+          <div class="sixteen wide column">
+            {{> afQuickField name='roomNum'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='startHour'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='startMin'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='endHour'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='endMin'}}
+          </div>
+          <div class="four wide column">
+            {{> afQuickField name='calColor'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='monday'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='tuesday'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='wednesday'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='thursday'}}
+          </div>
+          <div class="three wide column">
+            {{> afQuickField name='friday'}}
+          </div>
+        </div>
+        <br>
+        <button type="" class="huge ui black button">Update</button>
+      {{/autoForm}}
+    </div>
+  </div>
+  {{/If_Logged_In}}
+</template>

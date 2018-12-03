@@ -1,13 +1,7 @@
 <template name="Schedule_List_Page">
   {{#If_Logged_In}}
 
-  <div class="sidenav">
-    <br>
-    <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
-    <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
-    <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
-    <a href="#">Edit Schedule</a><br>
-  </div>
+    {{> Sidebar}}
 
   <div class="container topspace" style="padding-top: 60px">
 
@@ -33,10 +27,11 @@
                 <td>{{stuff.courseName}}</td>
                 <td>{{stuff.courseNum}}</td>
                 <td>{{stuff.roomNum}}</td>
-                <td>{{stuff.startTime}}</td>
-                <td>{{stuff.endTime}}</td>
-                <td>{{#if stuff.monday}}Monday{{/if}}</td>
-                <td><a href="{{pathFor 'Edit_Contact_Page' _id=stuff._id}}">Edit</a></td>
+                <td>{{stuff.startHour}}:{{stuff.startMin}}</td>
+                <td>{{stuff.endHour}}:{{stuff.endMin}}</td>
+                <td>{{#if stuff.monday}}M {{/if}}{{#if stuff.tuesday}}T {{/if}}{{#if stuff.wednesday}}W {{/if}}
+                    {{#if stuff.thursday}}Th {{/if}}{{#if stuff.friday}}F{{/if}}</td>
+                <td><a href="{{pathFor 'Edit_Schedule_Page' _id=stuff._id}}">Edit</a></td>
               </tr>
             {{/each}}
             </tbody>

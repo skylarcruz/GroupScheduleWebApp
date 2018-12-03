@@ -1,26 +1,20 @@
 <template name="Add_To_Schedule_Page">
   {{#If_Logged_In}}
 
-  <div class="sidenav">
-    <br>
-    <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
-    <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
-    <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
-    <a href="#">Edit Schedule</a><br>
-  </div>
+    {{> Sidebar}}
 
   <div class="container topspace" style="padding-top: 60px">
 
-    <div style="padding-top: 20px" class="ui text container">
+    <div class="ui text container" style="padding-top: 20px; font-size: 14px" >
       {{#autoForm
           collection=stuffCollection
-          template="semanticUI"
+          template="bootstrap3"
           id="AddToScheduleForm"
           type="insert"
           resetOnSuccess=true}}
-      <h4>Add Course</h4>
+      <b style="font-size: 18px">Add Course</b>
       <div class="ui divider"></div>
-      <div class="ui grid">
+      <div class="ui grid" style="font-size: 14px">
         <div class="sixteen wide column">
           {{> afQuickField name='courseName'}}
         </div>
@@ -30,11 +24,20 @@
         <div class="sixteen wide column">
           {{> afQuickField name='roomNum'}}
         </div>
-        <div class="eight wide column">
-          {{> afQuickField name='startTime' autofocus='' autocomplete="off"}}
+        <div class="three wide column">
+          {{> afQuickField name='startHour'}}
         </div>
-        <div class="eight wide column">
-          {{> afQuickField name="endTime" autofocus='' autocomplete="off"}}
+        <div class="three wide column">
+          {{> afQuickField name='startMin'}}
+        </div>
+        <div class="three wide column">
+          {{> afQuickField name='endHour'}}
+        </div>
+        <div class="three wide column">
+          {{> afQuickField name='endMin'}}
+        </div>
+        <div class="four wide column">
+          {{> afQuickField name='calColor'}}
         </div>
         <div class="three wide column">
           {{> afQuickField name='monday'}}
@@ -53,23 +56,9 @@
         </div>
       </div>
       <br>
-      <button type="" class="ui button">submit</button>
+      <button class="huge ui black button">submit</button>
   {{/autoForm}}
     </div>
   </div>
   {{/If_Logged_In}}
-</template>
-
-<template name="dpReplacement">
-
-    <div class="row">
-      <div class='col-sm-12'>
-        <div class="form-group">
-          <div class='input-group date' id='datetimepicker1'>
-            <input type='text' class="form-control" />
-          </div>
-        </div>
-      </div>
-    </div>
-
 </template>
