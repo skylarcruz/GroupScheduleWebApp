@@ -1,7 +1,51 @@
 <template name="Home_Page">
   <div class="container topspace" style="padding-top: 60px">
+    <h1 class="my-4" style="text-align:center"> Group Schedule </h1>
+    <h3 style="text-align:center"> An Elegant and Clean Design </h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="/images/schedule/image1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="col-sm-6">
+        <img src="/images/schedule/image2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <br>
+      <hr>
+    </div>
     <div class="container-fluid">
-      <h1 class="my-4">Group Schedule</h1>
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <img src=/images/schedule/image1.jpg style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <img src="/images/schedule/image2.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+
+          <div class="column">
+            <img class="demo cursor" src="/images/schedule/image1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="/images/schedule/image2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h3>Teamwork</h3>
       <div class="row">
         <div class="col-sm-7">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -70,53 +114,48 @@
           </div>
         </div>
       </div>
-      <h2> A clean and Elegant Design. </h2>
-      <div class="row">
-        <div class="col-sm-6">
-          <img class="img-responsive" id="myImg" src="/images/schedule/image1.jpg" alt="image1"
-            style="width:100%;">
-          <br>
-        </div>
-        <div class="col-sm-6">
-          <img class="img-responsive" id="myImg" src="/images/schedule/image2.jpg" alt="image2" style="width:100%;">
-          <br>
-        </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-          <!-- The Close Button -->
-          <span class="close">&times;</span>
-
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01">
-
-          <!-- Modal Caption (Image Text) -->
-          <div id="caption"></div>
-        </div>
-      </div>
-
     </div>
   </div>
-  <script language="javascript">
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function () {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+  <script>
+    function openModal() {
+      document.getElementById('myModal').style.display = "block";
     }
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
     }
   </script>
 </template>
