@@ -5,10 +5,7 @@ import '/imports/ui/layouts';
 import '/imports/ui/pages';
 import '/imports/ui/stylesheets/style.css';
 import '/imports/ui/stylesheets/simple-sidebar.css';
-<<<<<<< HEAD
-import '/imports/ui/stylesheets/pop-image.css';
-=======
-import '/imports/ui/stylesheets/reset.css';
+//import '/imports/ui/stylesheets/reset.css';
 import '/imports/ui/scss/style.scss';
 import '/imports/ui/partials/_layout.scss';
 import '/imports/ui/partials/_mixins.scss';
@@ -398,4 +395,3 @@ jQuery(document).ready(function($){
 	}
 });
 
->>>>>>> noName
