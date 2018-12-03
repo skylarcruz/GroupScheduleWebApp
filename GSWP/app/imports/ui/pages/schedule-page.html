@@ -2,11 +2,11 @@
   {{#If_Logged_In}}
     <div class="sidenav">
       <br>
-      <a href="#">Schedule Calendar</a><br>
-      <a href="#">Schedule List</a><br>
-      <a href="#">Add to Schedule</a><br>
+      <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
+      <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
+      <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
       <a href="#">Edit Schedule</a><br>
-    </div>
+    </div>/home/skylar/Downloads/main.js
     <!-- <iframe src="http://localhost:3000/calendar"></iframe> -->
   <div class="main">
     <h1>Schedule Page</h1>

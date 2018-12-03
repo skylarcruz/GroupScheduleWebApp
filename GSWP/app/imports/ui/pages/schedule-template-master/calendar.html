@@ -1,4 +1,15 @@
 <template name="Calendar">
+
+{{#If_Logged_In}}
+
+    <div class="sidenav">
+      <br>
+      <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
+      <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
+      <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
+      <a href="#">Edit Schedule</a><br>
+    </div>
+
 <body>
 <!--
 <head>
@@ -6,65 +17,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/resetCal.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/styleCal.css"> <!-- Resource style -->
 
 <!-- <title>Schedule Template | CodyHouse</title>
 </head>
 <body> -->
-
-{{#If_Logged_In}}
-
-<div class="sidenav">
-  <br>
-  <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
-  <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
-  <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
-  <a href="#">Edit Schedule</a><br>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-
-<div class="main">
-  <div class="ui container">
-    {{#if Template.subscriptionsReady}}
-    <table style="margin-top: 20px" class="ui celled table">
-      <thead>
-      <tr>
-        <th>Course Name</th>
-        <th>Course Number</th>
-        <th>Room</th>
-        <th>Start Time</th>
-        <th>End Time</th>
-        <th>Days</th>
-        <th>Edit</th>
-      </tr>
-      </thead>
-
-      <tbody>
-      {{#each stuff in stuffList}}
-      <tr>
-        <td>{{stuff.courseName}}</td>
-        <td>{{stuff.courseNum}}</td>
-        <td>{{stuff.roomNum}}</td>
-        <td>{{stuff.startTime}}</td>
-        <td>{{stuff.endTime}}</td>
-        <td></td>
-        <td><a href="{{pathFor 'Edit_Contact_Page' _id=stuff._id}}">Edit</a></td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
-    {{else}}
-    {{> Loading}}
-    {{/if}}
-  </div>
-</div>
-{{/If_Logged_In}}
-
+<div class="container topspace" style="padding-top: 60px">
 
 <div class="cd-schedule loading">
 	<div class="timeline">
@@ -263,6 +222,8 @@
 	<div class="cover-layer"></div>
 </div> <!-- .cd-schedule -->
 
+</div>
+
 <script src="js/modernizr.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script>
@@ -271,5 +232,6 @@
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 
 </body>
+{{/If_Logged_In}}
 </template>
 

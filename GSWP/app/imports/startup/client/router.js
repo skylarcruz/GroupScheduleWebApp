@@ -15,6 +15,20 @@ FlowRouter.route('/schedule', {
   },
 });
 
+FlowRouter.route('/schedule-list', {
+  name: 'Schedule_List_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Schedule_List_Page' });
+  },
+});
+
+FlowRouter.route('/add-to-schedule', {
+  name: 'Add_To_Schedule_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_To_Schedule_Page' });
+  },
+});
+
 FlowRouter.route('/about', {
   name: 'About_Page',
   action() {
@@ -36,15 +50,15 @@ FlowRouter.route('/contact', {
   },
 });
 
+FlowRouter.notFound = {
+  action() {
+    BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
+  },
+};
+
 FlowRouter.route('/calendar', {
   name: 'Calendar',
   action() {
     BlazeLayout.render('App_Body', { main: 'Calendar' });
   },
 });
-
-FlowRouter.notFound = {
-  action() {
-    BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
-  },
-};

@@ -9,25 +9,103 @@ export const Stuff = new Mongo.Collection('Stuff');
  * Create the schema for Stuff
  */
 export const StuffSchema = new SimpleSchema({
-  name: {
-    label: 'Name',
+  courseName: {
+    label: 'Course Name',
     type: String,
     optional: false,
-    max: 20,
+    max: 50,
     autoform: {
-      group: 'Stuff',
-      placeholder: 'Bicycle',
+      placeholder: 'Course Name',
     },
   },
-  quantity: {
-    label: 'Quantity',
-    type: Number,
+  courseNum: {
+    label: 'Course Number',
+    type: String,
+    max: 10,
     optional: false,
     autoform: {
-      group: 'Stuff',
-      placeholder: '3',
+      placeholder: 'Course Number',
     },
+  },
+  roomNum: {
+    label: 'Room Number',
+    type: String,
+    max: 10,
+    optional: false,
+    autoform: {
+      placeholder: 'Room Number',
+    },
+  },
+  startTime: {
+    label: 'Start Time',
+    type: String,
+    optional: false,
+    autoform: {
+      afFieldInput: {
+        type: 'datetimepicker',
+        opts: {
+          datepicker: false,
+          format:'H:mm',
+          step: 10,
+          minTime: '8:00 AM',
+          maxTime: '10:10 PM'
+        }
+      }
+    }
+  },
+  endTime: {
+    label: 'End Time',
+    type: String,
+    optional: false,
+    autoform: {
+      afFieldInput: {
+        type: 'datetimepicker',
+        opts: {
+          datepicker: false,
+          format:'H:mm',
+          step: 10,
+          minTime: '8:00 AM',
+          maxTime: '10:10 PM'
+        }
+      }
+    }
+  },
+  monday: {
+    label: 'Monday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  tuesday: {
+    label: 'Tuesday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  wednesday: {
+    label: 'Wednesday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  thursday: {
+    label: 'Thursday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
+  },
+  friday: {
+    label: 'Friday',
+    type: Boolean,
+    autoform: {
+      type: 'boolean-checkbox'
+    }
   },
 });
 
 Stuff.attachSchema(StuffSchema);
+
