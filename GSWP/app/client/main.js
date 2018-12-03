@@ -13,7 +13,8 @@ import '/imports/ui/partials/_variables.scss';
 import './imports/ui/js/jquery-3.0.0.min.js';
 import './imports/ui/js/modernizr.js';
 
-jQuery(document).ready(function($){
+window.addEventListener('load', function () {
+
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );
 	//if browser does not support transitions - use a different event to trigger them
@@ -393,5 +394,7 @@ jQuery(document).ready(function($){
 			'transform': value
 		});
 	}
-});
 
+
+//your code right here;
+}, false);
