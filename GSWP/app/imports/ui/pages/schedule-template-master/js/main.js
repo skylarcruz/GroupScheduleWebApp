@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+document.addEventListener('load' , function () {
 
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );
