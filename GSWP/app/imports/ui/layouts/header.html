@@ -12,9 +12,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a class="{{ isActiveRoute 'Home_Page'}} item" href="{{ pathFor 'Home_Page' }}">Home</a></li>
-          {{#if currentUser}}
-            <li><a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule</a></li>
-          {{/if}}
+          <li><a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule</a></li>
           <li><a class="{{ isActiveRoute 'About_Page'}} item" href="{{ pathFor 'About_Page' }}">About</a></li>
           <li><a class="{{ isActiveRoute 'Pricing_Page'}} item" href="{{ pathFor 'Pricing_Page' }}">Pricing</a></li>
           <li><a class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}">Contact</a></li>

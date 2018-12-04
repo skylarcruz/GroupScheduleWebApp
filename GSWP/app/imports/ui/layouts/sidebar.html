@@ -1,10 +1,10 @@
 <template name="Sidebar">
-  {{#If_Logged_In}}
+  {{#if currentUser}}
   <div class="sidenav">
     <br>
-    <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
     <a class="{{ isActiveRoute 'Calendar'}} item" href="{{ pathFor 'Calendar' }}">Schedule Calendar</a><br>
+    <a class="{{ isActiveRoute 'Schedule_List_Page'}} item" href="{{ pathFor 'Schedule_List_Page' }}">Schedule List</a><br>
     <a class="{{ isActiveRoute 'Add_To_Schedule_Page'}} item" href="{{ pathFor 'Add_To_Schedule_Page' }}">Add to Schedule</a><br>
   </div>
-  {{/If_Logged_In}}
+  {{/if}}
 </template>

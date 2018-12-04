@@ -1,8 +1,6 @@
 <template name="Calendar">
 
-{{#If_Logged_In}}
-
-  {{> Sidebar}}
+{{> Sidebar}}
 
 {{#if Template.subscriptionsReady}}
 
@@ -174,6 +172,5 @@
 {{else}}
   {{> Loading}}
 {{/if}}
-{{/If_Logged_In}}
 </template>
 
