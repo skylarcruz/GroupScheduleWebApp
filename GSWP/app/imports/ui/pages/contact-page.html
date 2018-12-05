@@ -1,7 +1,7 @@
 <template name="Contact_Page">
-    <div class="container topspace" style="padding-top: 60px">
+    <div class="container topspace" style="padding-top: 70px">
       <div class="container-fluid">
-        <h1 class="my-4">Contact</h1>
+          <h1 class="my-4" style="text-align:center; font-size:24px; font-weight: bold"> Contact </h1>
         <br>
         <form id="contact-form" method="post" action="contact.php" role="form">
           <div class="messages"></div>
@@ -9,7 +9,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="form_name">Firstname *</label>
+                  <label for="form_name">First Name *</label>
                   <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
                     required="required" data-error="Firstname is required.">
                   <div class="help-block with-errors"></div>
@@ -17,7 +17,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="form_lastname">Lastname *</label>
+                  <label for="form_lastname">Last Name *</label>
                   <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *"
                     required="required" data-error="Lastname is required.">
                   <div class="help-block with-errors"></div>
@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                <input type="submit" class="huge ui black button" value="Send message">
               </div>
             </div>
             <!-- <div class="row">
