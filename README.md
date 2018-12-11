@@ -5,4 +5,4 @@ This Program will allow Users to join groups. In these groups they can create av
 
 The team behind this project is S.A.F. It is comprised of Skylar Cruz, Alberto Clara, and Fabiane Yeung
 
-Current status: Design Phase
+Current status: Testing Phase
