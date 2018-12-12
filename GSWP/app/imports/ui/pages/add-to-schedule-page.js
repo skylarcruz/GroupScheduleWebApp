@@ -27,5 +27,3 @@ Template.Add_To_Schedule_Page.helpers({
     return Stuff;
   },
 });
-
-//Template.dpReplacement.replaces("afBootstrapDateTimePicker");

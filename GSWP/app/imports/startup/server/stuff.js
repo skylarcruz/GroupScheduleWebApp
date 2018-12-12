@@ -7,8 +7,8 @@ import { Stuff } from '../../api/stuff/stuff.js';
  */
 const stuffSeeds = [
   { courseName: 'Fundamentals of Software Engineering', courseNum: 'CS320', roomNum: 'VSCI 12',
-    startHour: "12", startMin: "00", endHour: "13", endMin: "15",
-    monday: false, tuesday: true, wednesday: false, thursday: true, friday:false, calColor: '1'}
+    startHour: '12', startMin: '00', endHour: '13', endMin: '15',
+    monday: false, tuesday: true, wednesday: false, thursday: true, friday: false, calColor: '1' },
 ];
 
 /**

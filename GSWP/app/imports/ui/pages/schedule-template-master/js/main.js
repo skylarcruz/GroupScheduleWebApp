@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 document.addEventListener('load' , function () {
 
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
